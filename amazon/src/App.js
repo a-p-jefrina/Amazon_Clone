@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import firebaseApp from "./firebase";
 import { useStateValue } from "./StateProvider";
+import Payment from "./Payment";
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -53,6 +54,15 @@ function App() {
               <>
                 <Header />
                 <Checkout />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/payment"
+            element={
+              <>
+                <Header />
+                <Payment />
               </>
             }
           ></Route>
