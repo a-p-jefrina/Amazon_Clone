@@ -9,6 +9,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import firebaseApp from "./firebase";
 import { useStateValue } from "./StateProvider";
 import Payment from "./Payment";
+import Footer from "./Footer";
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -73,6 +74,7 @@ function App() {
               <>
                 <Header />
                 <Home />
+                <Footer />
               </>
             }
           ></Route>

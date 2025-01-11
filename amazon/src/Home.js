@@ -1,16 +1,13 @@
 import React from "react";
 import "./Home.css";
 import Product from "./Product";
+import Slider from "./Slider";
 
 function Home() {
   return (
     <div className="home">
       <div className="home__container">
-        <img
-          className="home__image"
-          src="https://images-eu.ssl-images-amazon.com/images/G/31/INSLGW/pc_unrec_refresh._CB555261616_.jpg"
-          alt="banner"
-        />
+        <Slider />
         <div className="home__row">
           <Product
             id="75385294"
@@ -37,14 +34,14 @@ function Home() {
           />
           <Product
             id="15975382"
-            title="Amazon basics Compact Portable 12V 150 PSI Digital Tyre Inflator with Carrying Case"
+            title="Compact Portable 12V 150 PSI Digital Tyre Inflator with Carrying Case"
             price={2149}
             image="https://m.media-amazon.com/images/I/71v6o+eJLdL._SX355_.jpg"
             rating={4}
           />
           <Product
             id="35715982"
-            title="Amazon Brand - Solimo Slim Stainless Steel Water Bottle, Set of 3, 1 liter Each"
+            title="Solimo Slim Stainless Steel Water Bottle, Set of 3, 1 liter Each"
             price={619}
             image="https://m.media-amazon.com/images/I/81mrMggUQnS._SX425_.jpg"
             rating={2}
