@@ -21,7 +21,7 @@
 }
 
 .product > img {
-  max-height: 200px;
+  max-height: 150px;
   width: 100%;
   object-fit: contain;
   margin-bottom: 15px;
@@ -47,4 +47,10 @@
 
 .product__rating {
   display: flex;
+}
+
+@media (max-width: 768px) {
+  .product__info {
+    font-size: 12px;
+  }
 }

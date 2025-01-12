@@ -8,11 +8,13 @@
     rgba(0, 0, 0, 0)
   ); /*complete colour to transparent*/
 }
-
+.slider {
+  position: relative;
+}
 .slider > button {
   position: absolute;
-  top: 20%;
-  transform: translateY(-20%);
+  top: 50%;
+  transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0);
   color: rgba(0, 0, 0, 0.7);
   font-size: xx-large;

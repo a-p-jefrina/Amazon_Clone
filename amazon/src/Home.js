@@ -13,12 +13,12 @@ function Home() {
             id="75385294"
             title="The Lean Startup Creates Radically Successful Book"
             price={400}
-            image="https://th.bing.com/th/id/R.8a250c903f28bd410781432b10c5eea2?rik=OChpeTpp%2fWEVZw&riu=http%3a%2f%2fsites.imsa.edu%2facronym%2ffiles%2f2014%2f04%2flean-startup_book-cover.jpeg&ehk=O5l0WjPFfQPKOmbNd1rI%2fRnJ01zoIE7V%2fvCzhlPA5tY%3d&risl=&pid=ImgRaw&r=0"
+            image="https://www.lajoe.id/blog/content/images/2023/05/Lajoe.id---The-Lean-Startup-karya-Eric-Ries.jpg"
             rating={3}
           />
           <Product
             id="12321341"
-            title="The Derma Co 1% Hyaluronic Sunscreen SPF 50 Aqua Gel, PA++++ | For Oily, Dry, Acne-prone Skin | Lightweight, No white-cast for Broad Spectrum & Blue Light Protection - 30g"
+            title="The Derma Co 1% Hyaluronic Sunscreen SPF 50 Aqua Gel,For Oily, Dry, Acne-prone Skin & Blue Light Protection - 30g"
             price={275}
             image="https://s3.images-iherb.com/dme/dme00421/l/23.jpg"
             rating={4}
@@ -43,7 +43,7 @@ function Home() {
             id="35715982"
             title="Solimo Slim Stainless Steel Water Bottle, Set of 3, 1 liter Each"
             price={619}
-            image="https://m.media-amazon.com/images/I/81mrMggUQnS._SX425_.jpg"
+            image="https://m.media-amazon.com/images/I/81RslC-Ke+S._AC_SS450_.jpg"
             rating={2}
           />
         </div>
