@@ -2,7 +2,7 @@ import React from "react";
 import "./CheckoutProduct.css";
 import { useStateValue } from "./StateProvider";
 
-function CheckoutProduct({ id, image, title, price, rating }) {
+function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
   const [{ basket }, dispatch] = useStateValue();
   const removeFromBasket = () => {
     //remove
@@ -32,7 +32,9 @@ function CheckoutProduct({ id, image, title, price, rating }) {
             ))}
           {/**_ undefined i index can also ignore both */}
         </div>
-        <button onClick={removeFromBasket}>Remove from Basket</button>
+        {!hideButton && (
+          <button onClick={removeFromBasket}>Remove from Basket</button>
+        )}
       </div>
     </div>
   );

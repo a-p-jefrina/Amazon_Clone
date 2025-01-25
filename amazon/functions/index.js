@@ -12,16 +12,17 @@ const cors = require("cors");
 const stripe = require("stripe")(
   "sk_test_51Qk26BDztWJChYG5AUbmWP7wC7px7CExyTtsR29ypt9Iig6ov82Icps4zVR2URQBqJvuSEV02OO8Cw8ia1wVv3Mn00grpdPXBf"
 );
-//API
 
-// - App config
+//  API
+
+//  - App config
 const app = express();
 
-// - Middlewares
+//  - Middlewares
 app.use(cors({ origin: true }));
 app.use(express.json());
 
-// - API routers
+//  - API routers
 app.get("/", (request, response) => response.status(200).send("hello world"));
 app.post("/payments/create", async (request, response) => {
   const total = request.query.total;
@@ -30,14 +31,14 @@ app.post("/payments/create", async (request, response) => {
     amount: total,
     currency: "inr",
   });
-  //ok created
+  //  ok created
   response.status(201).send({
     clientSecret: paymentIntent.client_secret,
   });
 });
 
-// - Listen command
+//    - Listen command
 exports.api = functions.https.onRequest(app);
 
-//Example endpoint
-//http://127.0.0.1:5001/clone-1cd78/us-central1/api
+//  Example endpoint
+//  http://127.0.0.1:5001/clone-1cd78/us-central1/api

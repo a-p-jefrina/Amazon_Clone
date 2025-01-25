@@ -9,6 +9,8 @@ import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "./reducer";
 import { useNavigate } from "react-router-dom";
 import axios from "./axios";
+import { db } from "./firebase";
+import { collection, setDoc, doc } from "firebase/firestore";
 
 function Payment() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -52,11 +54,22 @@ function Payment() {
           card: elements.getElement(CardElement),
         },
       })
-      .then(({ paymentIntent }) => {
+      .then(async ({ paymentIntent }) => {
         //paymentIntent = payment confirmation
+        const userOrdersRef = collection(db, "users", user?.uid, "orders");
+        const orderDocRef = doc(userOrdersRef, paymentIntent.id);
+        await setDoc(orderDocRef, {
+          basket: basket,
+          amount: paymentIntent.amount,
+          created: paymentIntent.created,
+        });
+
         setSucceeded(true);
         setError(null);
         setProcessing(false);
+        dispatch({
+          type: "EMPTY_BASKET",
+        });
         navigate("/orders");
       });
   };
@@ -111,11 +124,7 @@ function Payment() {
               <CardElement onChange={handleChange} />
               <div className="payment__priceContainer">
                 <CurrencyFormat
-                  renderText={(value) => (
-                    <>
-                      <h3>Order Total: {value}</h3>
-                    </>
-                  )}
+                  renderText={(value) => <h3>Order Total: {value}</h3>}
                   decimalScale={2}
                   value={getBasketTotal(basket)}
                   displayType={"text"}
