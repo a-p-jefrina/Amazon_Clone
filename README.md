@@ -2,7 +2,7 @@
 Cloning Amazon using ReactJs
 
 
-## the important commands
+## The important commands
 npm config set legacy-peer-deps true
 
 npm install --save-dev ajv@^7
