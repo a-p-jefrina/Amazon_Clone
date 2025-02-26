@@ -151,7 +151,7 @@ After creating the app with `create-react-app`, remove the following files:
 
 ## Hosting Link
 
-https://clone-1cd78.web.app/
+Contact me for Link through Mail
 
 ## License
 
