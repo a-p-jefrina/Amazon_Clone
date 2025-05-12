@@ -153,6 +153,18 @@ After creating the app with `create-react-app`, remove the following files:
 
 Contact me for Link through Mail
 
+## Screenshots
+
+![amazon](https://github.com/user-attachments/assets/cb908e5b-1f2e-4c72-afa5-83ef5bb5a947)
+
+![a2](https://github.com/user-attachments/assets/a5b5b6d2-0a61-4052-96a7-3b866848886d)
+
+![a3](https://github.com/user-attachments/assets/a261b5f7-d826-4373-9b9d-792e8f0f4fee)
+
+![a4](https://github.com/user-attachments/assets/2c4912fc-9552-4c82-a4d1-208ba614fbfa)
+
+![a5](https://github.com/user-attachments/assets/58820c47-0d8b-4833-9a5b-559c6f3c5738)
+
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
